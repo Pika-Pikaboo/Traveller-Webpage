@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Outside Test</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 50px auto;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            float: left;
+            margin: 0 15px;
+            shape-outside: circle(50%);
+            /* syntax: circle(radius at cx cy) */
+            /* shape-outside: ellipse(50px 100px at 50% 50%);
+            syntax: ellipse(rx ry at cx cy) */
+            /* shape-outside: polygon(x1 y1, x2, y2, x3 y3, ....) */
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            /* border-bottom: 300px solid skyblue; */
+            /* border-right: 150px solid transparent; */
+            /* border-left: 150px solid transparent; */
+            border-right: 200px solid skyblue;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="circle"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore qui tenetur voluptatum ratione porro doloribus dolores voluptatem quas. Id unde iure culpa, sint voluptatem amet recusandae necessitatibus quo rerum eaque exercitationem tempore perspiciatis.
+            Expedita nihil voluptas accusantium facilis dolorum, rem explicabo alias neque quibusdam earum eius laboriosam vitae molestiae dicta! Accusantium rem eaque ut consequuntur aut ullam saepe, cum numquam sunt id cumque eius quas reprehenderit
+            mollitia ipsum commodi iusto voluptatem. Quod sed soluta facilis unde sint assumenda sit illo vitae quibusdam! Asperiores quaerat officia nihil consequuntur nam. Ipsa delectus assumenda labore nesciunt officiis autem, facere eos ipsum fuga
+            sed necessitatibus voluptate odit! Deleniti minus tenetur quos illo facere dolorem eum natus quibusdam veritatis illum molestiae nesciunt optio, amet atque. Optio accusamus numquam temporibus et ut ullam aliquam corrupti cum nobis, illo quas
+            impedit commodi incidunt officiis ex consequatur voluptatum saepe dolores molestiae inventore hic reiciendis quod laudantium? Debitis, dolorum!
+        </p>
+    </div>
+    <div class="container">
+        <div class="triangle"></div>
+    </div>
+</body>
+
+</html>
